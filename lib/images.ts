@@ -10,7 +10,7 @@ export type Artwork = {
 };
 
 const IMAGES_DIR = path.join(process.cwd(), "public", "images");
-const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
+const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif", ".svg"]);
 const FALLBACK_SIZE = { width: 1200, height: 1500 };
 
 export const LANDING_IMAGE_COUNT = 4;
