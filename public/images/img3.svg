@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <rect width="900" height="900" fill="#111111"/>
+  <g stroke="#e10600" stroke-width="3" opacity=".35"><path d="M450.0 380.0v140M380.0 450.0h140"/></g>
+  <text x="450.0" y="378.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="100" font-weight="700" fill="#e10600">eden is</text>
+  <text x="450.0" y="493.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="100" font-weight="700" fill="#e10600">so cool</text>
+  <text x="40" y="864" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#e10600" opacity=".8">img3.svg</text>
+</svg>

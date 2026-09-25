@@ -9,7 +9,7 @@ Drop images into `public/images/`. That's it — no code changes.
 - `img1.jpg` – `img4.jpg` are the landing page, and the first four on the Artwork page.
 - Everything else in the folder shows on the Artwork page, in natural name order
   (`img5.jpg`, `img6.jpg`, … `img10.jpg`, … `img20.jpg`).
-- `.jpg .jpeg .png .webp .avif .gif` all work. Dimensions are read automatically.
+- `.jpg .jpeg .png .webp .avif .gif .svg` all work. Dimensions are read automatically.
 - Missing landing images show a dashed placeholder naming the file that goes there.
 
 ## Editing text
