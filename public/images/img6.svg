@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
-  <rect width="800" height="1000" fill="#2b2d6e"/>
-  <g stroke="#f4d6cc" stroke-width="3" opacity=".35"><path d="M400.0 430.0v140M330.0 500.0h140"/></g>
-  <text x="400.0" y="420.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#f4d6cc">eden is</text>
-  <text x="400.0" y="521.2" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#f4d6cc">so cool</text>
-  <text x="40" y="964" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#f4d6cc" opacity=".8">img6.svg</text>
-</svg>
