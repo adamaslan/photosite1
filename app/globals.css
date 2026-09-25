@@ -25,3 +25,9 @@ body {
   background: var(--color-crosshair);
   color: #fff;
 }
+
+/* Thin scrollbar under the desktop image strip. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink) transparent;
+}

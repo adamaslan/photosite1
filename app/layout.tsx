@@ -21,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full font-sans">
         <SideNav />
         <MobileNav />
-        <main className="px-4 pb-16 pt-2 md:pl-56 md:pr-10 md:pt-10">{children}</main>
+        <main className="px-4 pb-16 pt-2 md:pb-10 md:pl-56 md:pr-10 md:pt-10">{children}</main>
       </body>
     </html>
   );
