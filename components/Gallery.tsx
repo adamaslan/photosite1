@@ -3,10 +3,11 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import type { Artwork } from "@/lib/images";
+import { HorizontalStrip } from "./HorizontalStrip";
 
-const GALLERY_SIZES = "(min-width: 1536px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw";
+const GALLERY_SIZES = "(min-width: 768px) 70vw, 100vw";
 
-/** Masonry grid of artworks; clicking one opens a full-screen viewer. */
+/** Artworks in a horizontal strip (vertical on mobile); clicking one opens a full-screen viewer. */
 export function Gallery({ artworks }: { artworks: Artwork[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -39,13 +40,13 @@ export function Gallery({ artworks }: { artworks: Artwork[] }) {
 
   return (
     <>
-      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 2xl:columns-4">
+      <HorizontalStrip>
         {artworks.map((artwork, index) => (
           <button
             key={artwork.file}
             type="button"
             onClick={() => setOpenIndex(index)}
-            className="mb-4 block w-full break-inside-avoid"
+            className="block w-full md:h-full md:w-auto"
             aria-label={`View ${artwork.file}`}
           >
             <Image
@@ -55,11 +56,11 @@ export function Gallery({ artworks }: { artworks: Artwork[] }) {
               height={artwork.height}
               sizes={GALLERY_SIZES}
               loading={index < 4 ? "eager" : "lazy"}
-              className="h-auto w-full transition-opacity hover:opacity-90"
+              className="h-auto w-full transition-opacity hover:opacity-90 md:h-full md:w-auto"
             />
           </button>
         ))}
-      </div>
+      </HorizontalStrip>
 
       {current && (
         <div

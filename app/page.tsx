@@ -1,18 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HorizontalStrip } from "@/components/HorizontalStrip";
 import { Placeholder } from "@/components/Placeholder";
 import { LANDING_IMAGE_COUNT, getLandingArtworks } from "@/lib/images";
 
-const LANDING_SIZES = "(min-width: 1536px) 25vw, (min-width: 768px) 50vw, 100vw";
+const LANDING_SIZES = "(min-width: 768px) 70vw, 100vw";
 
 export default function Home() {
   const artworks = getLandingArtworks();
   const missingCount = LANDING_IMAGE_COUNT - artworks.length;
 
   return (
-    <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 2xl:grid-cols-4">
+    <HorizontalStrip>
       {artworks.map((artwork, index) => (
-        <Link key={artwork.file} href="/artwork" aria-label="View all artwork">
+        <Link key={artwork.file} href="/artwork" aria-label="View all artwork" className="md:h-full">
           <Image
             src={artwork.src}
             alt={artwork.file}
@@ -21,13 +22,13 @@ export default function Home() {
             sizes={LANDING_SIZES}
             loading="eager"
             fetchPriority={index === 0 ? "high" : "auto"}
-            className="h-auto w-full"
+            className="h-auto w-full md:h-full md:w-auto"
           />
         </Link>
       ))}
       {Array.from({ length: missingCount }, (_, i) => (
-        <Placeholder key={i} label={`img${artworks.length + i + 1}.jpg`} />
+        <Placeholder key={i} index={artworks.length + i} />
       ))}
-    </div>
+    </HorizontalStrip>
   );
 }
