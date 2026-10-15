@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Fully static site: every route is prerendered, so export plain HTML and
+  // deploy zero serverless functions.
+  output: "export",
 };
 
 export default nextConfig;
