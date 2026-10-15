@@ -31,3 +31,8 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--color-ink) transparent;
 }
+/* Make the rule more specific */
+a {
+  color: blue !important;
+  text-decoration: underline !important;
+}
