@@ -5,7 +5,7 @@ export const site = {
   email: "eeniefer@gmail.com",
   instagram: "https://www.instagram.com/eden.niefer/",
   nav: [
-    { label: "Work", href: "/work" },
+    { label: "Work", href: "/artwork" },
     { label: "Contact", href: "/contact" },
     { label: "CV", href: "/cv" },
   ],
