@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 import { MobileNav } from "@/components/MobileNav";
 import { SideNav } from "@/components/SideNav";
 import { site } from "@/site.config";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ebGaramond = EB_Garamond({
+  variable: "--font-eb-garamond",
   subsets: ["latin"],
 });
 
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full font-sans">
+    <html lang="en" className={`${ebGaramond.variable} h-full antialiased`}>
+      <body className="min-h-full font-serif">
         <SideNav />
         <MobileNav />
         <main className="px-4 pb-16 pt-2 md:pb-10 md:pl-56 md:pr-10 md:pt-10">{children}</main>
