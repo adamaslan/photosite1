@@ -1,11 +1,11 @@
 // Edit this file to change the name, contact details and nav.
 export const site = {
   name: "Eden",
-  description: "Artwork by Eden",
-  email: "hello@example.com",
-  instagram: "https://instagram.com/",
+  description: "Photography by Eden",
+  email: "eeniefer@gmail.com",
+  instagram: "https://www.instagram.com/eden.niefer/",
   nav: [
-    { label: "Artwork", href: "/artwork" },
+    { label: "Work", href: "/artwork" },
     { label: "Contact", href: "/contact" },
     { label: "CV", href: "/cv" },
   ],
