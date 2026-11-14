@@ -56,9 +56,9 @@ export function MobileNav() {
         id="mobile-drawer"
         aria-label="Main"
         inert={!isOpen}
-        className={`fixed inset-y-0 left-0 z-50 flex w-4/5 max-w-xs flex-col bg-blood px-6 py-5 text-white transition-transform duration-300 ease-out md:hidden ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+     className={`fixed inset-y-0 left-0 z-50 flex w-4/5 max-w-xs flex-col bg-white px-6 py-5 text-ink transition-transform duration-300 ease-out md:hidden ${
+  isOpen ? "translate-x-0" : "-translate-x-full"
+}`}
       >
         <div className="flex items-center justify-between">
           <Link href="/" onClick={close} className="text-base font-medium tracking-tight">
