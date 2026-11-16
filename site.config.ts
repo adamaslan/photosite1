@@ -6,6 +6,7 @@ export const site = {
   instagram: "https://www.instagram.com/eden.niefer/",
   nav: [
     { label: "Work", href: "/artwork" },
+    { label: "Moving Image", href: "/moving-image" },
     { label: "Contact", href: "/contact" },
     { label: "CV", href: "/cv" },
   ],
