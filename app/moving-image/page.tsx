@@ -21,40 +21,33 @@ const NAV_GARAMOND = `
   }
 `;
 
-// Placeholder boxes stand in for the film stills, which Eden has not sent yet.
-// When the stills arrive, drop them in a new public/stills/ folder (NOT
-// public/images/ - that folder auto-feeds the Work gallery) and swap these
-// boxes for <Image> components.
-function StillPlaceholder({ className }: { className: string }) {
+// Stills live in public/stills/ (NOT public/images/ - that folder feeds the
+// Work gallery). Every still sits in the same 16:9 cell so the grid is even;
+// object-contain shows each whole frame with no cropping.
+function Still({ n, alt }: { n: number; alt: string }) {
   return (
-    <div
-      aria-hidden
-      className={`border border-[#dedede] bg-[#f4f4f4] ${className}`}
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`/stills/still-${n}.jpg`}
+      alt={alt}
+      loading="lazy"
+      className="aspect-video h-full w-full bg-black object-contain"
     />
   );
 }
 
 export default function MovingImagePage() {
   return (
-    <div className="max-w-3xl space-y-24 pb-24">
+    <div className="max-w-3xl space-y-16 pb-24">
       <style dangerouslySetInnerHTML={{ __html: NAV_GARAMOND }} />
 
       <section className="grid grid-cols-3 gap-4" aria-label="Stills">
-        {Array.from({ length: 9 }, (_, i) => (
-          <StillPlaceholder key={i} className="aspect-square" />
-        ))}
-      </section>
-
-      <section className="space-y-24">
-        <figure className="flex items-start gap-4">
-          <StillPlaceholder className="aspect-[7/5] w-1/2" />
-          <figcaption className="text-sm text-muted">caption</figcaption>
-        </figure>
-        <div className="flex items-end gap-6">
-          <StillPlaceholder className="aspect-square w-1/4" />
-          <p className="self-start text-sm text-muted">caption</p>
-          <StillPlaceholder className="ml-auto aspect-[7/5] w-1/2" />
-        </div>
+        <Still n={1} alt="Two girls at an upright piano, one holding a hand mirror" />
+        <Still n={2} alt="A hand on piano keys seen through white bars" />
+        <Still n={3} alt="A face lit in red" />
+        <Still n={4} alt="A church steeple with a cross against a pale sky" />
+        <Still n={5} alt="A girl in a green dress holding a Santa Biblia in front of a white gate" />
+        <Still n={6} alt="A woman braiding a girl's hair, seen through white window bars" />
       </section>
 
       <section aria-label="Film">
