@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   // Fully static site: every route is prerendered, so export plain HTML and
   // deploy zero serverless functions.
   output: "export",
+  images: { unoptimized: process.env.NODE_ENV === "development" },
 };
 
 export default nextConfig;

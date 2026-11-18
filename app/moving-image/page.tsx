@@ -38,10 +38,10 @@ function Still({ n, alt }: { n: number; alt: string }) {
 
 export default function MovingImagePage() {
   return (
-    <div className="max-w-3xl space-y-16 pb-24">
+    <div className="max-w-5xl space-y-16 pb-24">
       <style dangerouslySetInnerHTML={{ __html: NAV_GARAMOND }} />
 
-      <section className="grid grid-cols-3 gap-4" aria-label="Stills">
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3" aria-label="Stills">
         <Still n={1} alt="Two girls at an upright piano, one holding a hand mirror" />
         <Still n={2} alt="A hand on piano keys seen through white bars" />
         <Still n={3} alt="A face lit in red" />
