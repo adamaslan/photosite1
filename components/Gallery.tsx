@@ -8,7 +8,7 @@ import { HorizontalStrip } from "./HorizontalStrip";
 const GALLERY_SIZES = "(min-width: 768px) 70vw, 100vw";
 
 /** Artworks in a horizontal strip (vertical on mobile); clicking one opens a full-screen viewer. */
-export function Gallery({ artworks }: { artworks: Artwork[] }) {
+export function Gallery({ artworks, tight = false }: { artworks: Artwork[]; tight?: boolean }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const close = useCallback(() => setOpenIndex(null), []);
@@ -40,7 +40,7 @@ export function Gallery({ artworks }: { artworks: Artwork[] }) {
 
   return (
     <>
-      <HorizontalStrip>
+      <HorizontalStrip tight={tight}>
         {artworks.map((artwork, index) => (
           <button
             key={artwork.file}
