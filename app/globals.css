@@ -47,3 +47,10 @@ header a,
 aside nav a {
   font-size: 17px;
 }
+
+/* Keep the current page link visible in the phone menu (the drawer background is white). */
+@layer components {
+  [id="mobile-drawer"] a[aria-current="page"] {
+    color: var(--color-ink) !important;
+  }
+}
