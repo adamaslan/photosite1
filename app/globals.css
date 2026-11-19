@@ -36,3 +36,14 @@ a {
   color: blue !important;
   text-decoration: underline !important;
 }
+
+/* Side menu links in EB Garamond on every page. The desktop nav links use 17px so they read the same size as the Georgia they replace. */
+aside a,
+header a,
+[id="mobile-drawer"] a {
+  font-family: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
+}
+
+aside nav a {
+  font-size: 17px;
+}
