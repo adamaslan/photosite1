@@ -2,24 +2,6 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Moving Image" };
 
-// Eden asked for the side menu in blue underlined Garamond on this page
-// (iMessage 2026-11-15: "Can the font actually be Garamond", "the side menu is
-// blue underlined Garamond not red"). The site's code loads EB Garamond
-// (app/layout.tsx) but never applies it, so this page-scoped rule applies it to
-// the nav on THIS page only - other pages keep their current look. The a[href]
-// selectors also force the active link blue, overriding the active ink styling.
-// With output: "export" this style ships only in moving-image/index.html.
-const NAV_GARAMOND = `
-  aside a, header a, aside nav a, [id="mobile-drawer"] a {
-    font-family: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
-  }
-  @layer utilities {
-    aside a[href], header a[href], aside nav a[href], [id="mobile-drawer"] a[href] {
-      color: blue !important;
-      text-decoration: underline !important;
-    }
-  }
-`;
 
 // Stills live in public/stills/ (NOT public/images/ - that folder feeds the
 // Work gallery). Every still sits in the same 16:9 cell so the grid is even;
@@ -39,8 +21,6 @@ function Still({ n, alt }: { n: number; alt: string }) {
 export default function MovingImagePage() {
   return (
     <div className="max-w-5xl space-y-16 pb-24">
-      <style dangerouslySetInnerHTML={{ __html: NAV_GARAMOND }} />
-
       <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3" aria-label="Stills">
         <Still n={1} alt="Two girls at an upright piano, one holding a hand mirror" />
         <Still n={2} alt="A hand on piano keys seen through white bars" />
