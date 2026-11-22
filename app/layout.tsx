@@ -13,6 +13,7 @@ const ebGaramond = EB_Garamond({
 export const metadata: Metadata = {
   title: { default: site.name, template: `%s — ${site.name}` },
   description: site.description,
+  icons: { icon: [{ url: "/icon.gif", type: "image/gif", sizes: "32x32" }] },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
