@@ -37,4 +37,7 @@ export const GIRLS: Artwork[] = [
   { file: "girls-6.jpg", src: "/images/girls/girls-6.jpg", width: 3387, height: 2246 },
   { file: "girls-4.jpg", src: "/images/girls/girls-4.jpg", width: 1591, height: 2400 },
   { file: "girls-5.jpg", src: "/images/girls/girls-5.jpg", width: 4000, height: 6000 },
+  { file: "girls-7.jpg", src: "/images/girls/girls-7.jpg", width: 4492, height: 6774 },
+  { file: "girls-8.jpg", src: "/images/girls/girls-8.jpg", width: 3648, height: 5472 },
+  { file: "girls-9.jpg", src: "/images/girls/girls-9.jpg", width: 4492, height: 6774 },
 ];
