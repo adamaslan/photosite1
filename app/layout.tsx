@@ -11,9 +11,21 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://photosite1.vercel.app"),
   title: { default: site.name, template: `%s — ${site.name}` },
   description: site.description,
   icons: { icon: [{ url: "/icon.gif", type: "image/gif", sizes: "32x32" }] },
+  openGraph: {
+    title: site.name,
+    description: site.description,
+    siteName: site.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: site.name,
+    description: site.description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
