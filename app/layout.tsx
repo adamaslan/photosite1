@@ -10,6 +10,14 @@ const ebGaramond = EB_Garamond({
   subsets: ["latin"],
 });
 
+const shareImage = {
+  url: "/opengraph-image.gif",
+  width: 413,
+  height: 370,
+  type: "image/gif",
+  alt: "Spinning girl",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://photosite1.vercel.app"),
   title: { default: site.name, template: `%s — ${site.name}` },
@@ -20,11 +28,13 @@ export const metadata: Metadata = {
     description: site.description,
     siteName: site.name,
     type: "website",
+    images: [shareImage],
   },
   twitter: {
     card: "summary",
     title: site.name,
     description: site.description,
+    images: [shareImage.url],
   },
 };
 
